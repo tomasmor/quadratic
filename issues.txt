@@ -1,0 +1,54 @@
+1. Wrong return value for equation with discriminant equals zero.
+    1. Run quadratic.dll with parameters a = 1, b = 2, c = 1.
+    Expected result:
+      return value = 0
+      x1 = -1, x2 = -1
+    Actual result:
+      return value = 2
+      x1 = -1, x2 = -1
+    Issue also reproduces whith other coefficients when (b^2-4*a*c) = 0
+2. Library calculates wrong root for a < 0
+  1. Run quadratic.dll with parameters a = -1, b = 3, c = 4.
+      Expected result:
+        return value = 0
+        x1 = -1, x2 = 4
+      Actual result:
+        return value = 0
+        x1 = 4, x2 = 4
+      Looks like x1 calculates same way as x2.
+3. Wrong return value and roots calculation for equation with dscriminant below zero.
+  1. Run quadratic.dll with parameters a = 1, b = 1, c = 1.
+  Expected result:
+    return value = 2
+    x1 = 0, x2 = 0
+  Actual result:
+    return value = 0
+    x1 = 0.3660254037844386, x2 =  -1.3660254037844386
+  Also reproduces with different coefficients like (a = 1, b = 1, c = 10) etc
+  Unfortunatelly bug looks unstable but i can't localize when it happens.
+4. Library returns 100 or -100 for root values bigger than 100 (or less than -100).
+  1. Run quadratic.dll with parameters a = 1, b = -214, c = 1.
+  Expected result:
+    return value = 0
+    x1 = 213.99532700076205 , x2 = 0.004672999237953945
+  Actual result:
+    return value = 0
+    x1 = 100.0, x2 =  0.004672999237953945
+  For equations with positive root values bigger 100 library changes value to 100 and -100 for negative value less -100.
+5. No verification of input data.
+  1. Run quadratic.dll with parameters a = 1, b = 9223372036854775808, c = 1.
+  Expected result:
+    Lib signals about incorrect input.
+  Actual result:
+    return value = 0
+    x1 = 0, x2 = -100
+According to Tets-3--Automated-resting.pdf input data should be in double type. It means that only coefficients in (-9223372036854775808, 9223372036854775807) are allowed.
+6.  Wrong return value for equation with big coefficients ratio.
+    1. Run quadratic.dll with parameters a = 10, b = 30, c = 1.
+    Expected result:
+      return value = 0
+      x1 = -0.033712170138482024, x2 = -2.966287829861518
+    Actual result:
+      return value = 2
+      x1 = -0.033712170138482024, x2 = -2.966287829861518
+  Unfortunatelly was not able to localize exact condition it causes.

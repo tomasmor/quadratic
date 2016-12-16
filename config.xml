@@ -1,0 +1,26 @@
+<root>
+<coefficients>0 2 1</coefficients>
+<coefficients>1 3 -7</coefficients>
+<coefficients>1 0 -4</coefficients>
+<coefficients>1 0 4</coefficients>
+<coefficients>1 2 -4</coefficients>
+<coefficients>1 2 0</coefficients>
+<coefficients>-1 3 4</coefficients>
+<coefficients>1 2 1</coefficients>
+<coefficients>1 1 1</coefficients>
+<coefficients>-1 -5 -6</coefficients>
+<coefficients>3.00e-17 1 1</coefficients>
+<coefficients>3.00e-4 6.00e-4 9.00e-4</coefficients>
+<coefficients>3.00e-4 1 9.00e-4</coefficients>
+<coefficients>3.00e-4 1 2</coefficients>
+<coefficients>1 3.00e-4 2</coefficients>
+<coefficients>10 30 1</coefficients>
+<coefficients>9223 1 -9223</coefficients>
+<coefficients>9223372036854775807 1 -9223372036854775808</coefficients>
+<coefficients>1 -9223372036854775807 1</coefficients>
+<coefficients>1 -9223372036854775807 9223372036854775808</coefficients>
+<coefficients>9223372036854775807 1 -1</coefficients>
+<coefficients>1 0 0</coefficients>
+<coefficients>1 9223372036854775807 1</coefficients>
+<coefficients>0 0 0</coefficients>
+</root>
